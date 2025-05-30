@@ -1,6 +1,8 @@
+import 'package:circle_app/core/helpers/extension.dart';
 import 'package:circle_app/core/theming/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../../../core/routing/routes.dart';
 import 'widgets/custom_text_button.dart';
 
 class FisrtPage extends StatelessWidget {
@@ -16,13 +18,17 @@ class FisrtPage extends StatelessWidget {
             CustomTextButton(
               backgroundColor: ColorsApp.mainColor,
               text: 'سجل الدخول',
-              onPressed: () {},
+              onPressed: () {
+                context.pushNamed(Routes.logIn);
+              },
             ),
             SizedBox(height: 10.h),
             CustomTextButton(
               backgroundColor: ColorsApp.signColor,
               text: 'انشاء حساب',
-              onPressed: () {},
+              onPressed: () {
+                context.pushNamed(Routes.signUp);
+              },
             ),
           ],
         ),
