@@ -1,9 +1,11 @@
+import 'package:circle_app/core/routing/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'features/first/presentation/pages/fisrt_page.dart';
+import 'core/routing/routes.dart';
 
 class CircleApp extends StatelessWidget {
-  const CircleApp({super.key});
+  final AppRouter appRouter;
+  const CircleApp({super.key, required this.appRouter,});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +22,8 @@ class CircleApp extends StatelessWidget {
             scaffoldBackgroundColor: Colors.white,
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           ),
-          home: const FisrtPage(),
+          initialRoute: Routes.firstPage,
+          onGenerateRoute: appRouter.generateRoute,
         );
       },
     );
