@@ -62,7 +62,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/fonts/
-  #   - images/a_dot_ham.jpeg
+    - assets/lang/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
@@ -76,15 +76,18 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/en/Poppins-Regular.ttf
+        - asset: assets/fonts/en/Poppins-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/en/Poppins-Light.ttf
+          weight: 300
   #         style: italic
     - family: Tajawal
       fonts:
-        - asset: assets/fonts/Tajawal-Regular.ttf
-        - asset: assets/fonts/Tajawal-Bold.ttf
+        - asset: assets/fonts/ar/Tajawal-Regular.ttf
+        - asset: assets/fonts/ar/Tajawal-Bold.ttf
           weight: 700
   #
   # For details regarding fonts from package dependencies,
