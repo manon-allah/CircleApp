@@ -1,8 +1,7 @@
+import 'package:circle_app/features/auth/login/widgets/login/custom_enter_phone.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../core/theming/style.dart';
-import '../../../../core/widgets/custom_button.dart';
-import 'custom_choose_enter_phone.dart';
+import '../../../../../core/theming/style.dart';
 
 class CustomBody extends StatelessWidget {
   const CustomBody({
@@ -25,9 +24,7 @@ class CustomBody extends StatelessWidget {
               style: TextStyles.font14Normal,
             ),
             SizedBox(height: 24.h),
-            CustomChooseEnterPhone(),
-            SizedBox(height: 24.h),
-            CustomButton(),
+            CustomEnterPhone(),
           ],
         ),
       ),

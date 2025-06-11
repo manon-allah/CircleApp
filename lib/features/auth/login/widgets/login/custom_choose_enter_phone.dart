@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomChooseEnterPhone extends StatefulWidget {
-  const CustomChooseEnterPhone({super.key});
+  final TextEditingController phoneController;
+  const CustomChooseEnterPhone({super.key, required this.phoneController,});
 
   @override
   State<CustomChooseEnterPhone> createState() => _CustomChooseEnterPhoneState();
@@ -12,7 +13,6 @@ class CustomChooseEnterPhone extends StatefulWidget {
 
 class _CustomChooseEnterPhoneState extends State<CustomChooseEnterPhone> {
   Country selectedCountry = Country.parse('EG');
-  final TextEditingController phoneController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -63,7 +63,7 @@ class _CustomChooseEnterPhoneState extends State<CustomChooseEnterPhone> {
         ),
         SizedBox(height: 10.h),
         TextFormField(
-          controller: phoneController,
+          controller: widget.phoneController,
           keyboardType: TextInputType.phone,
           decoration: InputDecoration(
             prefixIcon: Icon(Icons.phone, size: 26.w),
@@ -80,7 +80,7 @@ class _CustomChooseEnterPhoneState extends State<CustomChooseEnterPhone> {
   @override
   void dispose() {
     super.dispose();
-    phoneController.clear();
-    phoneController.dispose();
+    widget.phoneController.clear();
+    widget.phoneController.dispose();
   }
 }

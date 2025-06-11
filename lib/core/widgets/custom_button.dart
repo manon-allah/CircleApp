@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key});
+  final void Function()? onPressed;
+  final String text;
+  const CustomButton({super.key, this.onPressed, required this.text,});
 
   @override
   Widget build(BuildContext context) {
@@ -18,8 +20,8 @@ class CustomButton extends StatelessWidget {
           ),
           padding: EdgeInsets.symmetric(vertical: 12.h, horizontal: 20.w),
         ),
-        onPressed: () {},
-        child: Text('دخول', style: TextStyle(fontSize: 14.sp)),
+        onPressed: onPressed,
+        child: Text(text, style: TextStyle(fontSize: 14.sp)),
       ),
     );
   }
